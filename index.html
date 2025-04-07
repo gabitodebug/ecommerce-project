@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce - Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1>E-Commerce</h1>
+      <a href="carrito.html" class="btn-cart">
+        <span class="icon-cart">&#128722;</span>
+      </a>
+    </div>
+    <!-- Barra de búsqueda con autocompletado -->
+    <div class="header-search">
+      <input type="text" id="search-input" placeholder="Buscar productos..." autocomplete="off">
+      <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#">Categorías</a>
+          <div class="dropdown-content">
+            <div class="nested-dropdown">
+              <a href="electronica.html">Electrónica</a>
+              <div class="nested-dropdown-content">
+                <a href="auriculares.html">Auriculares</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="busqueda.html">Búsqueda</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="productos-destacados">
+      <h2>Productos Destacados</h2>
+      <div class="card">
+        <img src="img/tv.jpeg" alt="Televisor Hisense 43">
+        <h3>Televisor Hisense 43"</h3>
+        <p>$250.000</p>
+        <button class="btn-checkout" id="add-to-cart-1">Agregar al carrito</button>
+      </div>
+      <div class="card">
+        <img src="img/phone.jpg" alt="Iphone 14 256gb">
+        <h3>Iphone 14 256gb</h3>
+        <p>$1.800.000</p>
+        <button class="btn-checkout" id="add-to-cart-2">Agregar al carrito</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Notificación que se muestra al agregar producto -->
+  <div id="notification" class="notification">
+    Su producto fue agregado al carrito
+  </div>
+
+  <footer>
+    <p>&copy; 2025 E-Commerce</p>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

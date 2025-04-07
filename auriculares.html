@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auriculares - E-Commerce</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1>E-Commerce</h1>
+      <a href="carrito.html" class="btn-cart">
+        <span class="icon-cart">&#128722;</span>
+      </a>
+    </div>
+    <!-- Barra de búsqueda con autocompletado -->
+    <div class="header-search">
+      <input type="text" id="search-input" placeholder="Buscar productos..." autocomplete="off">
+      <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#">Categorías</a>
+          <div class="dropdown-content">
+            <div class="nested-dropdown">
+              <a href="electronica.html">Electrónica</a>
+              <div class="nested-dropdown-content">
+                <a href="auriculares.html">Auriculares</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="busqueda.html">Búsqueda</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+    <div class="breadcrumb">
+      <a href="electronica.html">Electrónica</a> &gt; <span>Auriculares</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="producto">
+      <h2>Auriculares JVC</h2>
+      <img src="img/auriculares.jpeg" alt="Auriculares JVC" style="max-width:300px;">
+      <p>Precio: $150.000</p>
+      <button class="btn-checkout" id="add-to-cart">Agregar al carrito</button>
+
+      <!-- Pestañas para detalles del producto -->
+      <div class="tabs">
+        <button class="tab-link active" data-tab="descripcion">Descripción</button>
+        <button class="tab-link" data-tab="opiniones">Opiniones</button>
+        <button class="tab-link" data-tab="especificaciones">Especificaciones</button>
+      </div>
+      <div class="tab-content active" id="descripcion">
+        <p>Descripción detallada del producto.</p>
+      </div>
+      <div class="tab-content" id="opiniones">
+        <p>Opiniones de clientes sobre el producto.</p>
+      </div>
+      <div class="tab-content" id="especificaciones">
+        <p>Especificaciones técnicas del producto.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Notificación al agregar producto -->
+  <div id="notification" class="notification">
+    Su producto fue agregado al carrito
+  </div>
+
+  <footer>
+    <p>&copy; 2025 E-Commerce</p>
+  </footer>
+
+  <script src="js/auriculares.js"></script>
+</body>
+</html>

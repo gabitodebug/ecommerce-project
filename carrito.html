@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - E-Commerce</title>
+  <link rel="stylesheet" href="css/carrito-styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1>E-Commerce</h1>
+      <a href="carrito.html" class="btn-cart">
+        <span class="icon-cart">&#128722;</span>
+      </a>
+    </div>
+    <!-- Barra de búsqueda con autocompletado -->
+    <div class="header-search">
+      <input type="text" id="search-input" placeholder="Buscar productos..." autocomplete="off">
+      <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#">Categorías</a>
+          <div class="dropdown-content">
+            <div class="nested-dropdown">
+              <a href="electronica.html">Electrónica</a>
+              <div class="nested-dropdown-content">
+                <a href="auriculares.html">Auriculares</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="busqueda.html">Búsqueda</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carrito">
+      <h2>Tu Carrito</h2>
+      
+      <!-- Carrusel de imágenes del producto -->
+      <div class="carousel-container">
+        <div class="carousel" id="product-carousel">
+          <div class="carousel-item">
+            <img src="img/phone.jpg" alt="Iphone 14 256gb - Imagen 1">
+            <img src="img/tv.jpeg" alt="Iphone 14 256gb - Imagen 2">
+            <img src="img/auriculares.jpeg" alt="Iphone 14 256gb - Imagen 3">
+          </div>
+        </div>
+      </div>
+      
+      <div class="detalle">
+        <h3>Iphone 14 256gb</h3>
+        <p>$1.800.000</p>
+        <!-- Botón para confirmar eliminación vía modal -->
+        <button class="btn-checkout" id="delete-item">Eliminar del carrito</button>
+      </div>
+    </section>
+    <section class="checkout">
+      <button class="btn-checkout">Comprar ahora</button>
+    </section>
+  </main>
+
+  <!-- Modal de confirmación para eliminar producto -->
+  <div id="confirm-modal" class="modal">
+    <div class="modal-content">
+      <p>¿Estás seguro de eliminar el producto del carrito?</p>
+      <button id="confirm-yes" style="background: #dc3545; color: #fff;">Sí</button>
+      <button id="confirm-no" style="background: #6c757d; color: #fff;">No</button>
+    </div>
+  </div>
+
+  <!-- Modal para ampliar imagen -->
+  <div id="enlarge-modal" class="modal">
+    <span id="close-modal">&times;</span>
+    <img id="modal-img" src="" alt="Imagen Ampliada">
+  </div>
+
+  <!-- Icono de papelera para eliminación por swipe (se mantiene la clase) -->
+  <div id="trash-icon" class="trash-icon">
+    <a href="https://www.flaticon.com/free-icons/delete" title="delete icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/6861/6861362.png" alt="Trash Icon">
+    </a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 E-Commerce</p>
+  </footer>
+
+  <script src="js/carrito.js"></script>
+</body>
+</html>
